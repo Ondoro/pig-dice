@@ -1,0 +1,20 @@
+body{
+    margin: auto;
+    padding: 0;
+}
+.header1{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.p2{
+   margin-left: 35%;
+}
+.center{
+    text-align: center;
+}
+.marg{
+    margin-left: 35%;
+}
