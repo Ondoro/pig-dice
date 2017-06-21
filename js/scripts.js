@@ -1,7 +1,7 @@
-function Players1(points){
+function gamer1(points){
     this.points = points;
 }
-Players1.prototype.computeScores = function(randomValue){
+gamer1.prototype.computeScores = function(randomValue){
     while (randomValue > 0){
        $('#name1').prop('disabled', true);
     if (randomValue === 1){
@@ -17,12 +17,12 @@ Players1.prototype.computeScores = function(randomValue){
     }
 };
 
-Players1.prototype.holdCards = function(){
+gamer1.prototype.holdCards = function(){
      $('#Button').prop('disabled', true);
      $('#Button1').prop('disabled', false);
      alert("You have hold your cards at "+ this.points);
 };
-Players1.prototype.winner = function(){
+gamer1.prototype.winner = function(){
    if(this.points >= 100){
         alert("You are the winner");
         $('#Button').prop('disabled', true);
@@ -30,10 +30,10 @@ Players1.prototype.winner = function(){
 
     }
 };
-function Players2(points){
+function gamer2(points){
     this.points = points;
 }
-Players2.prototype.computeScores = function(randomValue){
+gamer2.prototype.computeScores = function(randomValue){
     while(randomValue > 0){
          $('#name2').prop('disabled', true);
         if (randomValue ===1){
@@ -46,12 +46,12 @@ Players2.prototype.computeScores = function(randomValue){
         }
     }
 };
-Players2.prototype.holdCards = function(){
+gamer2.prototype.holdCards = function(){
      $('#Button').prop('disabled', false);
      $('#Button1').prop('disabled', true);
      alert("You have hold your cards at "+ this.points);
 };
-Players2.prototype.winner = function(){
+gamer2.prototype.winner = function(){
    if(this.points >= 100){
         alert("You are the winner");
         $('#Button').prop('disabled', true);
@@ -63,10 +63,10 @@ Players2.prototype.winner = function(){
 //User Interface
 $(document).ready(function(){
     //An object for player1
-    var result  = new Players1(0);
+    var result  = new gamer1(0);
     //An object of player2
-    var result1  = new Players2(0);
-    $('form#player1').submit(function(event){
+    var result1  = new gamer2(0);
+    $('form#gamer1').submit(function(event){
         event.preventDefault();
         var randomm = Math.floor(Math.random() * 6) + 1;
         var name1 = $('input#name1').val();
@@ -80,7 +80,7 @@ $(document).ready(function(){
         result.winner();
 
         });
-    $('form#player2').submit(function(event){
+    $('form#gamer2').submit(function(event){
         event.preventDefault();
         var random2 = Math.floor(Math.random() * 6) + 1;
         var name2 = $('input#name2').val();
