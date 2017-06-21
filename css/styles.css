@@ -1,10 +1,12 @@
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 body{
     margin: auto;
     padding: 0;
 }
 .header1{
-  
+
     text-align: center;
+    font-family: 'Roboto Slab';
 }
 h2{
     text-align: center;
@@ -17,4 +19,10 @@ h2{
 }
 .marg{
     margin-left: 35%;
+}
+.mainimg {
+  background-image: url(../img1.jpg);
+  background-size: contain;
+  padding: 90px;
+  height: 100px;
 }
